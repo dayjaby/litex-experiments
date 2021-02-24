@@ -1,0 +1,10 @@
+
+using sysbus
+mach create "litex-vexriscv"
+machine LoadPlatformDescription @platforms/cpus/arty_litex.repl
+machine StartGdbServer 10001
+showAnalyzer sysbus.uart
+showAnalyzer sysbus.uart Antmicro.Renode.Analyzers.LoggingUartAnalyzer
+
+sysbus LoadBinary @build/arty/software/bios/bios.bin 0
+cpu PC 0

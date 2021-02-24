@@ -1,0 +1,43 @@
+
+rom: Memory.MappedMemory @ { sysbus 0x0 }
+    size: 0x10000
+
+sram: Memory.MappedMemory @ { sysbus 0x10000000 }
+    size: 0x2000
+
+main_ram: Memory.MappedMemory @ { sysbus 0x40000000 }
+    size: 0x10000000
+
+cpu: CPU.VexRiscv @ sysbus
+
+    cpuType: "rv32im"
+
+    timeProvider: cpu_timer
+
+ctrl: Miscellaneous.LiteX_SoC_Controller @ { sysbus 0xf0000000 }
+
+cpu_timer: Timers.LiteX_CPUTimer @ { sysbus 0xf0000800 }
+    frequency: 100000000
+    IRQ -> cpu@100
+
+uart: UART.LiteX_UART @ { sysbus 0xf0002000 }
+    -> cpu@0
+
+timer0: Timers.LiteX_Timer @ { sysbus 0xf0002800 }
+    -> cpu@1
+    frequency: 100000000
+
+sysbus:
+    init add:
+        SilenceRange <4026544128 0x200> # ddrphy
+
+sysbus:
+    init add:
+        SilenceRange <4026546176 0x200> # sdram
+
+mmc_controller: SD.LiteSDCard @ {
+    sysbus 0xf0005000; // phy
+    sysbus new Bus.BusMultiRegistration { address: 0xf0005800; size: 0x100; region: "core" };
+    sysbus new Bus.BusMultiRegistration { address: 0xf0006000; size: 0x100; region: "reader" };
+    sysbus new Bus.BusMultiRegistration { address: 0xf0006800; size: 0x100; region: "writer" }
+}

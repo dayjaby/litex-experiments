@@ -1,0 +1,6 @@
+[submodule "litex-renode"]
+	path = litex-renode
+	url = https://github.com/litex-hub/litex-renode
+[submodule "litex-boards"]
+	path = litex-boards
+	url = https://github.com/litex-hub/litex-boards
