@@ -1,5 +1,5 @@
 #
-# This script runs NuttX OS on LiteX+VexRiscv in Renode
+# This script runs the LiteX baremetal demo on LiteX+VexRiscv in Renode
 #
 # Note that it uses a custom LiteX configuration.
 # For details, please refer to the repl file.

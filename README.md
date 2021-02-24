@@ -13,6 +13,14 @@ export LITEX_BOARD=arty
   --build
 ```
 
+Creating the baremetal demo:
+
+```
+litex_bare_metal_demo --build-path=build/arty
+cp demo/demo.elf firmwares/
+rm -rf demo*
+```
+
 Generate resc and repl files:
 
 ```
@@ -23,10 +31,25 @@ Generate resc and repl files:
   --bios-binary build/$LITEX_BOARD/software/bios/bios.bin
 ```
 
-Example call:
+If planning to run the baremetal demo, replace the cpuType in `platforms/cpus/${LITEX_BOARD}_litex.repl` with `rv32imac`.
 
+Example calls:
+
+Baremetal Demo:
+```
+renode scripts/single-node/arty_litex_demo.resc
+(monitor) start
+```
+
+NuttX:
 ```
 renode scripts/single-node/arty_litex_nuttx.resc
+(monitor) start
+```
+
+Zephyr OS:
+```
+renode scripts/single-node/arty_litex_zephyr.resc
 (monitor) start
 ```
 
