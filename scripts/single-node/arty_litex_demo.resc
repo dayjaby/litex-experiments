@@ -1,0 +1,27 @@
+#
+# This script runs NuttX OS on LiteX+VexRiscv in Renode
+#
+# Note that it uses a custom LiteX configuration.
+# For details, please refer to the repl file.
+#
+using sysbus
+
+mach create
+machine LoadPlatformDescription @platforms/cpus/arty_litex.repl
+
+showAnalyzer uart
+
+$demo?=@firmwares/demo.elf
+
+macro reset
+"""
+    sysbus LoadELF $demo
+"""
+
+runMacro $reset
+machine StartGdbServer 3333
+# logLevel -1 sysbus.cpu_timer
+# logLevel -1 sysbus.timer0
+# logLevel -1 sysbus.uart
+logLevel -1
+start
