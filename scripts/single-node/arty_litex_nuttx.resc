@@ -11,7 +11,7 @@ machine LoadPlatformDescription @platforms/cpus/arty_litex.repl
 
 showAnalyzer uart
 
-$nuttx?=@firmwares/nuttx
+$nuttx?=@firmwares/nuttx.elf
 
 macro reset
 """

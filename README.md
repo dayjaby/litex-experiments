@@ -1,4 +1,7 @@
-Generate arty gateware and software in litex_boards folder:
+Gateware
+========
+
+Generate arty gateware:
 
 ```
 export LITEX_BOARD=arty
@@ -13,14 +16,6 @@ export LITEX_BOARD=arty
   --build
 ```
 
-Creating the baremetal demo:
-
-```
-litex_bare_metal_demo --build-path=build/arty
-cp demo/demo.elf firmwares/
-rm -rf demo*
-```
-
 Generate resc and repl files:
 
 ```
@@ -31,23 +26,48 @@ Generate resc and repl files:
   --bios-binary build/$LITEX_BOARD/software/bios/bios.bin
 ```
 
-If planning to run the baremetal demo, replace the cpuType in `platforms/cpus/${LITEX_BOARD}_litex.repl` with `rv32imac`.
+Software
+========
 
-Example calls:
+Baremetal
+---------
 
-Baremetal Demo:
+Creating the baremetal demo:
+
+```
+litex_bare_metal_demo --build-path=build/arty
+cp demo/demo.elf firmwares/
+rm -rf demo*
+```
+
 ```
 renode scripts/single-node/arty_litex_demo.resc
 (monitor) start
 ```
 
-NuttX:
+NuttX
+-----
+
+```
+git submodule update --init --recursive
+os/nuttx/nuttx/tools/configure.sh -l arty_a7:nsh
+make -C os/nuttx/nuttx
+```
+
+Simulate in renode
+~~~~~~~~~~~~~~~~~~
+
 ```
 renode scripts/single-node/arty_litex_nuttx.resc
 (monitor) start
 ```
 
-Zephyr OS:
+Zephyr
+------
+
+Simulate in renode
+~~~~~~~~~~~~~~~~~~
+
 ```
 renode scripts/single-node/arty_litex_zephyr.resc
 (monitor) start
