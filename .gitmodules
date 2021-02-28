@@ -4,3 +4,10 @@
 [submodule "litex-boards"]
 	path = litex-boards
 	url = https://github.com/litex-hub/litex-boards
+[submodule "os/nuttx/nuttx"]
+	path = os/nuttx/nuttx
+	url = git@github.com:dayjaby/incubator-nuttx
+	branch = nuttx_litex
+[submodule "os/nuttx/apps"]
+	path = os/nuttx/apps
+	url = https://github.com/apache/incubator-nuttx-apps
