@@ -40,6 +40,9 @@ cp demo/demo.elf firmwares/
 rm -rf demo*
 ```
 
+Simulate in renode
+~~~~~~~~~~~~~~~~~~
+
 ```
 renode scripts/single-node/arty_litex_demo.resc
 (monitor) start
@@ -50,12 +53,11 @@ NuttX
 
 ```
 git submodule update --init --recursive
-os/nuttx/nuttx/tools/configure.sh -l arty_a7:nsh
-make -C os/nuttx/nuttx
+export LITEX_PATH=$(python -c "import litex; print(litex.__path__[0])")
+make nuttx
 ```
 
 Simulate in renode
-~~~~~~~~~~~~~~~~~~
 
 ```
 renode scripts/single-node/arty_litex_nuttx.resc
