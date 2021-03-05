@@ -9,7 +9,7 @@ python3 litex_setup.py submodules
 sudo python3 litex_setup.py install
 
 export LITEX_BOARD=arty
-./litex-boards/litex_boards/targets/$LITEX_BOARD.py \
+./litex/litex-boards/litex_boards/targets/$LITEX_BOARD.py \
   --toolchain vivado \
   --cpu-type vexriscv \
   --cpu-variant imac+debug \
@@ -70,7 +70,7 @@ renode scripts/single-node/arty_litex_nuttx.resc
 WIP: write SD card driver. Create the csr.h file for nuttx:
 
 ```
-./litex-boards/litex_boards/targets/$LITEX_BOARD.py \
+./litex/litex-boards/litex_boards/targets/$LITEX_BOARD.py \
   --toolchain vivado \
   --cpu-type vexriscv \
   --cpu-variant imac+debug \
