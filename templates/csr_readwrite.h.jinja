@@ -16,7 +16,6 @@ static inline {{ ctype }} {{ reg_name }}_read(void) {
         {% else %}
         return csr_read_simple(CSR_BASE + {{ reg_base | hex}}L);
 	{% endif %}
-	// HELLO
 }
 
 {% if not csr.read_only %}

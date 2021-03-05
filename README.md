@@ -76,7 +76,7 @@ WIP: write SD card driver. Create the csr.h file for nuttx:
   --with-sdcard \
   --generated-dir os/nuttx/nuttx/arch/risc-v/src/litex/hardware \
   --jinja-templates templates \
-  --filter-templates csr.h \
+  --filter-templates csr_defines.h csr.h soc.h \
   --load
 ```
 
