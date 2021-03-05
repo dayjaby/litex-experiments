@@ -11,3 +11,6 @@
 [submodule "os/nuttx/apps"]
 	path = os/nuttx/apps
 	url = https://github.com/apache/incubator-nuttx-apps
+[submodule "litex"]
+	path = litex
+	url = git@github.com:dayjaby/litex
