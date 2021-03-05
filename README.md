@@ -4,6 +4,10 @@ Gateware
 Generate arty gateware:
 
 ```
+cd litex
+python3 litex_setup.py submodules
+sudo python3 litex_setup.py install
+
 export LITEX_BOARD=arty
 ./litex-boards/litex_boards/targets/$LITEX_BOARD.py \
   --toolchain vivado \
@@ -74,7 +78,7 @@ WIP: write SD card driver. Create the csr.h file for nuttx:
   --csr-csv build/$LITEX_BOARD/csr.csv \
   --timer-uptime \
   --with-sdcard \
-  --generated-dir os/nuttx/nuttx/arch/risc-v/src/litex/hardware \
+  --generated-dir os/nuttx/nuttx/arch/risc-v/src/litex/hardware/generated \
   --jinja-templates templates \
   --filter-templates csr_defines.h csr.h soc.h \
   --load

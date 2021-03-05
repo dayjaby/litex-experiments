@@ -11,6 +11,90 @@
 [submodule "os/nuttx/apps"]
 	path = os/nuttx/apps
 	url = https://github.com/apache/incubator-nuttx-apps
-[submodule "litex"]
-	path = litex
-	url = git@github.com:dayjaby/litex
+[submodule "litex/migen"]
+	path = litex/migen
+	url = https://github.com/m-labs/migen
+[submodule "litex/nmigen"]
+	path = litex/nmigen
+	url = https://github.com/nmigen/nmigen
+[submodule "litex/pythondata-software-compiler_rt"]
+	path = litex/pythondata-software-compiler_rt
+	url = https://github.com/litex-hub/pythondata-software-compiler_rt
+[submodule "litex/litex"]
+	path = litex/litex
+	url = https://github.com/enjoy-digital/litex
+[submodule "litex/liteeth"]
+	path = litex/liteeth
+	url = https://github.com/enjoy-digital/liteeth
+[submodule "litex/litedram"]
+	path = litex/litedram
+	url = https://github.com/enjoy-digital/litedram
+[submodule "litex/litepcie"]
+	path = litex/litepcie
+	url = https://github.com/enjoy-digital/litepcie
+[submodule "litex/litesata"]
+	path = litex/litesata
+	url = https://github.com/enjoy-digital/litesata
+[submodule "litex/litesdcard"]
+	path = litex/litesdcard
+	url = https://github.com/enjoy-digital/litesdcard
+[submodule "litex/liteiclink"]
+	path = litex/liteiclink
+	url = https://github.com/enjoy-digital/liteiclink
+[submodule "litex/litevideo"]
+	path = litex/litevideo
+	url = https://github.com/enjoy-digital/litevideo
+[submodule "litex/litescope"]
+	path = litex/litescope
+	url = https://github.com/enjoy-digital/litescope
+[submodule "litex/litejesd204b"]
+	path = litex/litejesd204b
+	url = https://github.com/enjoy-digital/litejesd204b
+[submodule "litex/litespi"]
+	path = litex/litespi
+	url = https://github.com/litex-hub/litespi
+[submodule "litex/litehyperbus"]
+	path = litex/litehyperbus
+	url = https://github.com/litex-hub/litehyperbus
+[submodule "litex/litex-boards"]
+	path = litex/litex-boards
+	url = https://github.com/litex-hub/litex-boards
+[submodule "litex/pythondata-misc-tapcfg"]
+	path = litex/pythondata-misc-tapcfg
+	url = https://github.com/litex-hub/pythondata-misc-tapcfg
+[submodule "litex/pythondata-misc-opentitan"]
+	path = litex/pythondata-misc-opentitan
+	url = https://github.com/litex-hub/pythondata-misc-opentitan
+[submodule "litex/pythondata-cpu-lm32"]
+	path = litex/pythondata-cpu-lm32
+	url = https://github.com/litex-hub/pythondata-cpu-lm32
+[submodule "litex/pythondata-cpu-mor1kx"]
+	path = litex/pythondata-cpu-mor1kx
+	url = https://github.com/litex-hub/pythondata-cpu-mor1kx
+[submodule "litex/pythondata-cpu-picorv32"]
+	path = litex/pythondata-cpu-picorv32
+	url = https://github.com/litex-hub/pythondata-cpu-picorv32
+[submodule "litex/pythondata-cpu-serv"]
+	path = litex/pythondata-cpu-serv
+	url = https://github.com/litex-hub/pythondata-cpu-serv
+[submodule "litex/pythondata-cpu-vexriscv"]
+	path = litex/pythondata-cpu-vexriscv
+	url = https://github.com/litex-hub/pythondata-cpu-vexriscv
+[submodule "litex/pythondata-cpu-vexriscv-smp"]
+	path = litex/pythondata-cpu-vexriscv-smp
+	url = https://github.com/litex-hub/pythondata-cpu-vexriscv-smp
+[submodule "litex/pythondata-cpu-rocket"]
+	path = litex/pythondata-cpu-rocket
+	url = https://github.com/litex-hub/pythondata-cpu-rocket
+[submodule "litex/pythondata-cpu-minerva"]
+	path = litex/pythondata-cpu-minerva
+	url = https://github.com/litex-hub/pythondata-cpu-minerva
+[submodule "litex/pythondata-cpu-microwatt"]
+	path = litex/pythondata-cpu-microwatt
+	url = https://github.com/litex-hub/pythondata-cpu-microwatt
+[submodule "litex/pythondata-cpu-blackparrot"]
+	path = litex/pythondata-cpu-blackparrot
+	url = https://github.com/litex-hub/pythondata-cpu-blackparrot
+[submodule "litex/pythondata-cpu-cv32e40p"]
+	path = litex/pythondata-cpu-cv32e40p
+	url = https://github.com/litex-hub/pythondata-cpu-cv32e40p
