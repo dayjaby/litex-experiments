@@ -1,13 +1,23 @@
+Virtual Environment
+===================
+
+It's recommended to run everything in a virtualenv:
+```
+sudo apt install python3-virtualenv
+virtualenv litex-env
+source litex-env/bin/activate
+cd litex
+python3 litex_setup.py submodules
+python3 litex_setup.py install
+cd ..
+```
+
 Gateware
 ========
 
 Generate arty gateware:
 
 ```
-cd litex
-python3 litex_setup.py submodules
-sudo python3 litex_setup.py install
-
 export LITEX_BOARD=arty
 ./litex/litex-boards/litex_boards/targets/$LITEX_BOARD.py \
   --toolchain vivado \

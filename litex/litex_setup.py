@@ -19,43 +19,43 @@ if os.path.exists(".gitignore"):
 # name,  (url, recursive clone, develop, sha1)
 repos = [
     # HDL
-    ("migen",        ("https://github.com/m-labs/",        True,  True, None)),
-    ("nmigen",       ("https://github.com/nmigen/",        True,  True, None)),
+    ("migen",        ("https://github.com/m-labs/",        True,  True, 0x7014bdccc11270764186e6a4441fb58238c612aa)),
+    ("nmigen",       ("https://github.com/nmigen/",        True,  True, 0xf7c2b9419f9de450be76a0e9cf681931295df65f)),
 
     # LiteX SoC builder
-    ("pythondata-software-compiler_rt", ("https://github.com/litex-hub/",     False, True, None)),
-    ("litex",                           ("https://github.com/dayjaby/", False, True, None)),
+    ("pythondata-software-compiler_rt", ("https://github.com/litex-hub/",     False, True, 0xfcb03245613ccf3079cc833a701f13d0beaae09d)),
+    ("litex",                           ("https://github.com/dayjaby/", False, True, 0x3cbdc567ff4c50610e3b67c8e7b4ece9fe4da628)),
 
     # LiteX cores ecosystem
-    ("liteeth",      ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litedram",     ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litepcie",     ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litesata",     ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litesdcard",   ("https://github.com/enjoy-digital/", False, True, None)),
-    ("liteiclink",   ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litevideo",    ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litescope",    ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litejesd204b", ("https://github.com/enjoy-digital/", False, True, None)),
-    ("litespi",      ("https://github.com/litex-hub/",     False, True, None)),
-    ("litehyperbus", ("https://github.com/litex-hub/",     False, True, None)),
+    ("liteeth",      ("https://github.com/enjoy-digital/", False, True, 0x89b197d1a05e9d3049ae53a40cb4294202a9f6c1)),
+    ("litedram",     ("https://github.com/enjoy-digital/", False, True, 0xe3c2ab075785c5a979268e573f5bb5b94582b1c4)),
+    ("litepcie",     ("https://github.com/enjoy-digital/", False, True, 0x01d7b584e8c222ba986b4c8f939d690b9c6f6f7c)),
+    ("litesata",     ("https://github.com/enjoy-digital/", False, True, 0xbaf5dc60711f68fa99b53a928dc60e35edb1bb13)),
+    ("litesdcard",   ("https://github.com/enjoy-digital/", False, True, 0x17f6216caa1dc156546ebd4208082aca35b16221)),
+    ("liteiclink",   ("https://github.com/enjoy-digital/", False, True, 0x0980a7cf4ffcb0b69a84fa0343a66180408b2a91)),
+    ("litevideo",    ("https://github.com/enjoy-digital/", False, True, 0x41f30143075ece3fff5c33a332ed067d1837cbb3)),
+    ("litescope",    ("https://github.com/enjoy-digital/", False, True, 0xf7a9672284b01f68159debbde4ff581ddade3bce)),
+    ("litejesd204b", ("https://github.com/enjoy-digital/", False, True, 0xc7d4892cb75129b953f91d6ee575c87b697e04ef)),
+    ("litespi",      ("https://github.com/litex-hub/",     False, True, 0x55926a6c035da37123fa467779a6b72cdd26d061)),
+    ("litehyperbus", ("https://github.com/litex-hub/",     False, True, 0x5282d5167c4c91984b614febdb062450b26aec52)),
 
     # LiteX boards support
-    ("litex-boards", ("https://github.com/litex-hub/",     False, True, None)),
+    ("litex-boards", ("https://github.com/litex-hub/",     False, True, 0x002b72f038f00cafe7147c821a65da50ad124d03)),
 
     # Optional LiteX data
-    ("pythondata-misc-tapcfg",     ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-misc-opentitan",  ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-lm32",        ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-mor1kx",      ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-picorv32",    ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-serv",        ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-vexriscv",    ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-vexriscv-smp",("https://github.com/litex-hub/", True,  True, None)),
-    ("pythondata-cpu-rocket",      ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-minerva",     ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-microwatt",   ("https://github.com/litex-hub/", False, True, 0xf9807b6)),
-    ("pythondata-cpu-blackparrot", ("https://github.com/litex-hub/", False, True, None)),
-    ("pythondata-cpu-cv32e40p",    ("https://github.com/litex-hub/", True,  True, None)),
+    ("pythondata-misc-tapcfg",     ("https://github.com/litex-hub/", False, True, 0x0e6809132b7a42d26fc148b2b5e54ede8d6021ab)),
+    ("pythondata-misc-opentitan",  ("https://github.com/litex-hub/", False, True, 0x26c58de6e8521f0eba3d71dfbbce8abd679cdf7c)),
+    ("pythondata-cpu-lm32",        ("https://github.com/litex-hub/", False, True, 0xcac2e4178e4ca44e60a368a22d5ea828b2647197)),
+    ("pythondata-cpu-mor1kx",      ("https://github.com/litex-hub/", False, True, 0xc64530f429a2387ec2e11b79debd30cb8ff1bf76)),
+    ("pythondata-cpu-picorv32",    ("https://github.com/litex-hub/", False, True, 0xb6b3f4b1c3e94efba9500d8fcfe523f12e0dae39)),
+    ("pythondata-cpu-serv",        ("https://github.com/litex-hub/", False, True, 0xaad920fb4b4da33a4e08184882dc2e8498553f93)),
+    ("pythondata-cpu-vexriscv",    ("https://github.com/litex-hub/", False, True, 0x7f9db486d402066f6adee5028ae031f09145f4be)),
+    ("pythondata-cpu-vexriscv-smp",("https://github.com/litex-hub/", True,  True, 0x26cf32e65008e086f2a3051204927e4d472b8866)),
+    ("pythondata-cpu-rocket",      ("https://github.com/litex-hub/", False, True, 0x8a34e1316ebf5588d9bea7dc930e89165bd94e54)),
+    ("pythondata-cpu-minerva",     ("https://github.com/litex-hub/", False, True, 0x2d584d998132d773e3b02c325351734733d60bab)),
+    ("pythondata-cpu-microwatt",   ("https://github.com/litex-hub/", False, True, 0xf9807b6de50aab8b264f0bc9a945e42f1a636456)),
+    ("pythondata-cpu-blackparrot", ("https://github.com/litex-hub/", False, True, 0x4264d9b0ee43dbb04a94260a6cf9063202996537)),
+    ("pythondata-cpu-cv32e40p",    ("https://github.com/litex-hub/", True,  True, 0x91748b7ebc36e1d3a34c1173420510d7c788b651)),
 ]
 
 repos = OrderedDict(repos)
@@ -162,10 +162,16 @@ if "install" in sys.argv[1:]:
         print("[installing " + name + "]...")
         if need_develop:
             os.chdir(os.path.join(current_path, name))
-            if "--user" in sys.argv[1:]:
-                subprocess.check_call("python3 setup.py develop --user", shell=True)
+            """
+            if sys.prefix == sys.base_prefix:
             else:
-                subprocess.check_call("python3 setup.py develop", shell=True)
+                source_cmd = "source {}/bin/activate && ".format(sys.prefix)
+            """
+            source_cmd = ""
+            if "--user" in sys.argv[1:]:
+                subprocess.check_call(source_cmd + "python3 setup.py develop --user", shell=True)
+            else:
+                subprocess.check_call(source_cmd + "python3 setup.py develop", shell=True)
 
     if "--user" in sys.argv[1:]:
         if ".local/bin" not in os.environ.get("PATH", ""):
