@@ -95,3 +95,6 @@
 [submodule "litex/pythondata-cpu-cv32e40p"]
 	path = litex/pythondata-cpu-cv32e40p
 	url = https://github.com/litex-hub/pythondata-cpu-cv32e40p
+[submodule "os/zephyr/zephyr"]
+	path = os/zephyr/zephyr
+	url = git@github.com:dayjaby/zephyr

@@ -3,9 +3,14 @@ Virtual Environment
 
 It's recommended to run everything in a virtualenv:
 ```
-sudo apt install python3-virtualenv
-virtualenv litex-env
-source litex-env/bin/activate
+sudo pip3 install virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
+mkvirtualenv litex-env
+echo "export ZEPHYR_BASE=$(pwd)/os/zephyr/zephyr" >> $VIRTUAL_ENV/bin/postactivate
+deactivate
+workon litex-env
+# for zephyr support, please install:
+pip3 install west pyelftools
 cd litex
 python3 litex_setup.py submodules
 python3 litex_setup.py install
@@ -77,7 +82,7 @@ renode scripts/single-node/arty_litex_nuttx.resc
 (monitor) start
 ```
 
-WIP: write SD card driver. Create the csr.h file for nuttx:
+Running NuttX on the Arty A7 has been tested with:
 
 ```
 ./litex/litex-boards/litex_boards/targets/$LITEX_BOARD.py \
@@ -92,6 +97,9 @@ WIP: write SD card driver. Create the csr.h file for nuttx:
   --jinja-templates templates \
   --filter-templates csr_defines.h csr.h soc.h \
   --load
+
+make nuttx
+litex_term --serial-boot --kernel os/nuttx/nuttx/nuttx.bin /dev/ttyUSB1
 ```
 
 Zephyr
@@ -102,6 +110,13 @@ Simulate in renode
 ```
 renode scripts/single-node/arty_litex_zephyr.resc
 (monitor) start
+```
+
+Running Zephyr OS on the Arty A7 has been tested with:
+
+```
+make zephyr
+litex_term --serial-boot --kernel build/zephyr/zephyr.bin /dev/ttyUSB1
 ```
 
 More examples in /opt/renode.

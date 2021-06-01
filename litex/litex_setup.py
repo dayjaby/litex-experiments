@@ -24,7 +24,7 @@ repos = [
 
     # LiteX SoC builder
     ("pythondata-software-compiler_rt", ("https://github.com/litex-hub/",     False, True, 0xfcb03245613ccf3079cc833a701f13d0beaae09d)),
-    ("litex",                           ("https://github.com/dayjaby/", False, True, 0x3cbdc567ff4c50610e3b67c8e7b4ece9fe4da628)),
+    ("litex",                           ("https://github.com/dayjaby/", False, True, 0x49190e3bf203cd46c99a94a85a2e4f8d6b94367b)),
 
     # LiteX cores ecosystem
     ("liteeth",      ("https://github.com/enjoy-digital/", False, True, 0x89b197d1a05e9d3049ae53a40cb4294202a9f6c1)),
@@ -40,7 +40,7 @@ repos = [
     ("litehyperbus", ("https://github.com/litex-hub/",     False, True, 0x5282d5167c4c91984b614febdb062450b26aec52)),
 
     # LiteX boards support
-    ("litex-boards", ("https://github.com/litex-hub/",     False, True, 0x002b72f038f00cafe7147c821a65da50ad124d03)),
+    ("litex-boards", ("https://github.com/dayjaby/",     False, True, 0x002b72f038f00cafe7147c821a65da50ad124d03)),
 
     # Optional LiteX data
     ("pythondata-misc-tapcfg",     ("https://github.com/litex-hub/", False, True, 0x0e6809132b7a42d26fc148b2b5e54ede8d6021ab)),
