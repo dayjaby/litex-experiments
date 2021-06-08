@@ -34,7 +34,7 @@ repos = [
     ("litesdcard",   ("https://github.com/enjoy-digital/", False, True, 0x17f6216caa1dc156546ebd4208082aca35b16221)),
     ("liteiclink",   ("https://github.com/enjoy-digital/", False, True, 0x0980a7cf4ffcb0b69a84fa0343a66180408b2a91)),
     ("litevideo",    ("https://github.com/enjoy-digital/", False, True, 0x41f30143075ece3fff5c33a332ed067d1837cbb3)),
-    ("litescope",    ("https://github.com/enjoy-digital/", False, True, 0xf7a9672284b01f68159debbde4ff581ddade3bce)),
+    ("litescope",    ("https://github.com/dayjaby/", False, True, 0xe4ed47deb51790ebfa47e06205da3d8ad1a34afa)),
     ("litejesd204b", ("https://github.com/enjoy-digital/", False, True, 0xc7d4892cb75129b953f91d6ee575c87b697e04ef)),
     ("litespi",      ("https://github.com/litex-hub/",     False, True, 0x55926a6c035da37123fa467779a6b72cdd26d061)),
     ("litehyperbus", ("https://github.com/litex-hub/",     False, True, 0x5282d5167c4c91984b614febdb062450b26aec52)),
