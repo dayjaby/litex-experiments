@@ -7,6 +7,7 @@ sudo pip3 install virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv litex-env
 echo "export ZEPHYR_BASE=$(pwd)/os/zephyr/zephyr" >> $VIRTUAL_ENV/bin/postactivate
+echo "export LITEX_BOARD=arty" >> $VIRTUAL_ENV/bin/postactivate
 deactivate
 workon litex-env
 # for zephyr support, please install:
