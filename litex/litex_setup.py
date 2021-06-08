@@ -24,7 +24,7 @@ repos = [
 
     # LiteX SoC builder
     ("pythondata-software-compiler_rt", ("https://github.com/litex-hub/",     False, True, 0xfcb03245613ccf3079cc833a701f13d0beaae09d)),
-    ("litex",                           ("https://github.com/dayjaby/", False, True, 0x49190e3bf203cd46c99a94a85a2e4f8d6b94367b)),
+    ("litex",                           ("https://github.com/dayjaby/", False, True, 0x98836a5e130552d8245752f5251c48d7ea84634e)),
 
     # LiteX cores ecosystem
     ("liteeth",      ("https://github.com/enjoy-digital/", False, True, 0x89b197d1a05e9d3049ae53a40cb4294202a9f6c1)),
