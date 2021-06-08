@@ -28,7 +28,7 @@ repos = [
 
     # LiteX cores ecosystem
     ("liteeth",      ("https://github.com/enjoy-digital/", False, True, 0x89b197d1a05e9d3049ae53a40cb4294202a9f6c1)),
-    ("litedram",     ("https://github.com/enjoy-digital/", False, True, 0xe3c2ab075785c5a979268e573f5bb5b94582b1c4)),
+    ("litedram",     ("https://github.com/enjoy-digital/", False, True, 0x5ce6bf782458ad6ec86a94b2c14be033e0856ce8)),
     ("litepcie",     ("https://github.com/enjoy-digital/", False, True, 0x01d7b584e8c222ba986b4c8f939d690b9c6f6f7c)),
     ("litesata",     ("https://github.com/enjoy-digital/", False, True, 0xbaf5dc60711f68fa99b53a928dc60e35edb1bb13)),
     ("litesdcard",   ("https://github.com/enjoy-digital/", False, True, 0x17f6216caa1dc156546ebd4208082aca35b16221)),
