@@ -20,8 +20,8 @@ analyzer = LiteScopeAnalyzerDriver(wb.regs, "analyzer", debug=True, config_csv="
 analyzer.configure_group(0)
 #analyzer.add_rising_edge_trigger("basesoc_spimaster_status_status")
 
-analyzer.add_rising_edge_trigger("dw1000_spi_clk")
-#analyzer.add_rising_edge_trigger("dw1000_spi_cs_n")
+#analyzer.add_rising_edge_trigger("dw1000_spi_clk")
+analyzer.add_falling_edge_trigger("dw1000_spi_cs_n")
 #analyzer.add_rising_edge_trigger("main_basesoc_spimaster_cs_storage")
 #analyzer.add_falling_edge_trigger("spi_miso")
 

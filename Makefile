@@ -1,6 +1,7 @@
-zephyr_app = os/zephyr/zephyr/samples/cpp_synchronization
+zephyr_app = apps/zephyr/uwb_distance_arty
+zephyr_dest = build_zephyr
 os_list = zephyr nuttx
-os_main = nuttx
+os_main = zephyr
 LITEX_BOARD = arty
 LITEX_CMD = load
 ethernet_iface = enx00e04e716421
@@ -50,16 +51,16 @@ litex-gdb-client:
 	riscv32-unknown-linux-gnu-gdb build/$(LITEX_BOARD)/software/bios/bios.elf -ex "target remote :3333"
 
 zephyr:
-	west build -p auto -b litex_vexriscv $(zephyr_app)
+	west build -p auto -b litex_vexriscv -d $(zephyr_dest) $(zephyr_app)
 
 zephyr-clean:
-	west build -t clean -p auto -b litex_vexriscv $(zephyr_app)
+	west build -t clean -p auto -b litex_vexriscv -d $(zephyr_dest) $(zephyr_app)
 
 zephyr-distclean:
-	west build -t pristine -p auto -b litex_vexriscv $(zephyr_app)
+	west build -t pristine -p auto -b litex_vexriscv -d $(zephyr_dest) $(zephyr_app)
 
 zephyr-flash:
-	litex_term --serial-boot --kernel build/zephyr/zephyr.bin $(usb_port)
+	litex_term --serial-boot --kernel $(zephyr_dest)/zephyr/zephyr.bin $(usb_port)
 
 nuttx:
 	@os/nuttx/nuttx/tools/configure.sh -l arty_a7:nsh
